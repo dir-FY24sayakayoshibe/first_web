@@ -5,10 +5,19 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>セッションスコープのテスト</title>
+        <title><c:out value="${param.title}" /> | サンプルサイト</title>
     </head>
     <body>
-        <h1>こんにちは、 <c:out value="${sessionScope.username}" /> さん！</h1>
-        <p><a href="session_c.jsp">次のページへ</a></p>
+        <header>
+            <h1><c:out value="${param.title}" /></h1>
+        </header>
+
+        <div id="main">
+            ${param.content}
+        </div>
+
+        <footer>
+            (c) Taro Kirameki
+        </footer>
     </body>
 </html>
